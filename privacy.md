@@ -4,7 +4,7 @@ title: Cinch — Privacy Policy
 
 # Privacy Policy for Cinch
 
-**Last updated: 26 July 2026**
+**Last updated: 10 October 2026**
 
 Cinch is a card game that runs on your device. It has no accounts, no sign-in, no
 advertising, and no social features. This policy describes the small amount of data the
@@ -21,20 +21,22 @@ app does send, and the larger amount it deliberately does not.
 
 ## What the app collects
 
-The app uses three services from Expo — EAS Insights, EAS Observe, and EAS Update — which
-together send the following.
+The app uses three services from Expo (EAS Insights, EAS Observe and EAS Update) for
+updates, performance and crash diagnostics, and **PostHog** for gameplay statistics.
+Together they send the following.
 
-### An installation identifier
+### Installation identifiers
 
-A random identifier is created on your device the first time you open the app, and is sent
-with the data below so that events from one installation can be grouped together.
+Two random identifiers are created on your device. One is shared by the Expo services, and
+the other by the gameplay statistics sent to PostHog. Each is sent with its own data, so
+that events from one installation can be grouped together.
 
-It is generated on your device and is not derived from your name, your Apple account, or
-any hardware identifier. It is not an advertising identifier. Deleting and reinstalling
-the app creates a new one.
+Both are generated on your device and neither is derived from your name, your Apple
+account, or any hardware identifier. Neither is an advertising identifier, and the app
+does not copy one into the other. Deleting and reinstalling the app creates new ones.
 
-We are naming it plainly because it is a persistent identifier, even though it identifies
-an installation rather than a person.
+We are naming them plainly because they are persistent identifiers, even though they
+identify an installation rather than a person.
 
 ### Gameplay statistics
 
@@ -45,6 +47,12 @@ taken, and the stage a game was at if it was abandoned.
 **These never include the cards in anyone's hand, a record of the moves played, or any
 name.** Where something needs summarising, it is reduced to a single number or label on
 your device first, and only that summary is sent.
+
+They are sent with the app's version and the kind of device and operating system it is
+running on, so that a problem on one kind of phone can be told apart from a problem with
+the game. They are **not** sent with your language, your time zone, or any location. The
+service is configured not to work out a location from your internet address, and to
+discard that address when the statistics arrive.
 
 ### Performance and crash diagnostics
 
@@ -89,8 +97,12 @@ users to contact each other through the app.
 
 ## Data processing and retention
 
-The data described above is transmitted to and stored by Expo (Expo Application Services)
-acting as our service provider. See Expo's privacy policy at <https://expo.dev/privacy>.
+The data described above is transmitted to and stored by our service providers:
+
+- **Expo** (Expo Application Services): updates, performance and crash diagnostics. See
+  <https://expo.dev/privacy>.
+- **PostHog**, on its United States cloud: gameplay statistics. PostHog is configured never
+  to build a profile of a person. See <https://posthog.com/privacy>.
 
 ## Changes
 
